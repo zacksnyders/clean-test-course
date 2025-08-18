@@ -9,7 +9,7 @@ class Delivery():
       return 5
     else:
       return 2.5
-
+ 
 class Subtotal():
   def calculate(order):
     cost = 0
