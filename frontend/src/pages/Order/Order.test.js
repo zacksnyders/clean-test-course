@@ -43,6 +43,7 @@ describe('Test Order', () => {
 
   test('Test Update Delivery Fee', async () => {
     //Modify the delivery distance and verify that the delivery fee is updated
+
     //Act:
     //Setup the Mock API
     setupMock();
@@ -63,7 +64,8 @@ describe('Test Order', () => {
     );
     //Assert: replace the return true.
     await waitFor(() => {
-      return true;
+      expect(screen.getAllByText('$5.00'))
+      .toHaveLength(1);
     });
   });
 });
