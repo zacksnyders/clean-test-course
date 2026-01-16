@@ -5,12 +5,12 @@ on:
     branches:
       - lesson-5
 jobs:
-security_test:
+  security_test:
     runs-on: ubuntu-latest
     steps:
-    - name: ZAP Baseline Scan
-    - uses: zaproxy/action-baseline@v0.15.0
-      with:
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.15.0
+        with:
         target: 'http://hangryhippo.quantic.host'  # Replace with your application's URL        
 #  function_test: (commented out to save learner time)
 #    runs-on: ubuntu-latest
