@@ -35,7 +35,7 @@ security_test:
         run: |
           coverage run -m --source=./hangry_api pytest
           coverage report
-  deploy:
+    deploy:
     needs: [build_and_test]
     runs-on: ubuntu-latest
     defaults:
